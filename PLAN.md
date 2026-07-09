@@ -93,9 +93,9 @@
 
 ## Étape 6 - Pattern App of Apps
 
-- [ ] Comprendre le rôle de la root Application.
-- [ ] Compléter `platform/bootstrap/root-app.yaml`.
-- [ ] Compléter les Applications dans `platform/apps/dev/`.
+- [x] Comprendre le rôle de la root Application.
+- [x] Compléter `platform/bootstrap/root-app.yaml`.
+- [x] Compléter les Applications dans `platform/apps/dev/`.
 - [ ] Vérifier que la root Application pilote les applications enfants.
 - [ ] Tester un changement Git et la détection par ArgoCD.
 
