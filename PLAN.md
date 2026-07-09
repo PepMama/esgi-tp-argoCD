@@ -83,13 +83,13 @@
 
 ## Étape 5 - Installer ArgoCD et déclarer une première Application
 
-- [ ] Créer le cluster kind avec `make cluster-up`.
-- [ ] Installer ingress-nginx et ArgoCD avec `make argocd-install`.
-- [ ] Ajouter les entrées hosts.
-- [ ] Récupérer le mot de passe admin ArgoCD.
-- [ ] Ouvrir l'UI ArgoCD.
-- [ ] Déclarer une première Application.
-- [ ] Vérifier la synchronisation dans ArgoCD.
+- [x] Créer le cluster kind avec `make cluster-up`.
+- [x] Installer ingress-nginx et ArgoCD avec `make argocd-install`.
+- [x] Ajouter les entrées hosts.
+- [x] Récupérer le mot de passe admin ArgoCD.
+- [x] Ouvrir l'UI ArgoCD.
+- [x] Déclarer une première Application.
+- [x] Vérifier la synchronisation dans ArgoCD.
 
 ## Étape 6 - Pattern App of Apps
 
