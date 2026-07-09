@@ -15,7 +15,7 @@
 | 1 | Comprendre GitOps | ✅ |
 | 2 | Vocabulaire ArgoCD | ✅ |
 | 3 | Containeriser un service | 🟡 local validé, push GHCR à faire |
-| 4 | Écrire un chart Helm | ⬜ |
+| 4 | Écrire un chart Helm | ✅ |
 | 5 | Installer ArgoCD et déclarer une première Application | ⬜ |
 | 6 | Pattern App of Apps | ⬜ |
 | 7 | ApplicationSet et previews par branche | ⬜ |
@@ -72,14 +72,14 @@
 
 ## Étape 4 - Écrire un chart Helm
 
-- [ ] Lire le chart existant du service.
-- [ ] Compléter `Chart.yaml`.
-- [ ] Compléter `values.yaml`.
-- [ ] Compléter `values-dev.yaml`.
-- [ ] Compléter les templates Kubernetes.
-- [ ] Lancer `helm lint`.
-- [ ] Lancer `helm template`.
-- [ ] Valider avec `kubectl apply --dry-run=client`.
+- [x] Lire le chart existant du service.
+- [x] Compléter `Chart.yaml`.
+- [x] Compléter `values.yaml`.
+- [x] Compléter `values-dev.yaml`.
+- [x] Compléter les templates Kubernetes.
+- [x] Lancer `helm lint`.
+- [x] Lancer `helm template`.
+- [x] Valider avec `kubectl create --dry-run=client` sans cluster, puis refaire `apply --dry-run=client` après `cluster-up`.
 
 ## Étape 5 - Installer ArgoCD et déclarer une première Application
 
