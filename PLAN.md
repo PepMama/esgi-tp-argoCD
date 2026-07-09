@@ -116,7 +116,7 @@
 - [x] Tester un rollback via Git.
 - [x] Comprendre les hooks.
 - [x] Comprendre les sync waves.
-- [ ] Documenter les scénarios dans le rapport.
+- [x] Documenter les scénarios dans le rapport.
 
 ## Étape 9 - Sécuriser et observer ArgoCD
 
