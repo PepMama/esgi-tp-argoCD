@@ -101,12 +101,12 @@
 
 ## Étape 7 - ApplicationSet et previews par branche
 
-- [ ] Lire le fonctionnement d'ApplicationSet.
-- [ ] Comprendre la génération par branche.
-- [ ] Compléter les manifests preview.
-- [ ] Créer ou utiliser une branche de test.
-- [ ] Vérifier la création d'un environnement de preview.
-- [ ] Vérifier la suppression propre après suppression de branche.
+- [x] Lire le fonctionnement d'ApplicationSet.
+- [x] Comprendre la génération par branche.
+- [x] Compléter les manifests preview.
+- [x] Créer ou utiliser une branche de test.
+- [x] Vérifier la création d'un environnement de preview.
+- [x] Vérifier la suppression propre après suppression de branche.
 
 ## Étape 8 - Drift, rollback, hooks, sync waves
 
