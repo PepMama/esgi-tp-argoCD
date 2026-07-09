@@ -10,13 +10,13 @@ metadata:
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
-  project: devhub
+  project: default
 
   source:
     # TODO : URL de votre fork.
-    repoURL: https://github.com/<votre-handle>/devhub-campus.git
+    repoURL: https://github.com/PepMama/esgi-tp-argoCD.git
     targetRevision: main
-    path: services/notif/chart
+    path: devhub-campus/services/notif/chart
     helm:
       valueFiles:
         - values-dev.yaml
@@ -26,9 +26,6 @@ spec:
     namespace: devhub-dev
 
   syncPolicy:
-    automated:
-      prune: false
-      selfHeal: true
     syncOptions:
       - CreateNamespace=true
       - ServerSideApply=true
