@@ -110,12 +110,12 @@
 
 ## Étape 8 - Drift, rollback, hooks, sync waves
 
-- [ ] Provoquer un drift.
-- [ ] Observer `OutOfSync`.
-- [ ] Tester ou documenter `selfHeal`.
-- [ ] Tester un rollback via Git.
-- [ ] Comprendre les hooks.
-- [ ] Comprendre les sync waves.
+- [x] Provoquer un drift.
+- [x] Observer le drift et la correction automatique.
+- [x] Tester ou documenter `selfHeal`.
+- [x] Tester un rollback via Git.
+- [x] Comprendre les hooks.
+- [x] Comprendre les sync waves.
 - [ ] Documenter les scénarios dans le rapport.
 
 ## Étape 9 - Sécuriser et observer ArgoCD
