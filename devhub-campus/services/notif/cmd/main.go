@@ -34,6 +34,7 @@ func main() {
 	var level slog.Level
 	_ = level.UnmarshalText([]byte(levelStr))
 	slog.SetDefault(slog.New(slog.NewJSONHandler(os.Stdout, &slog.HandlerOptions{Level: level})))
+	slog.Debug("debug logging enabled", "service", "notif")
 
 	http.HandleFunc("/healthz", func(w http.ResponseWriter, _ *http.Request) {
 		_ = json.NewEncoder(w).Encode(map[string]any{"ok": true, "service": "notif"})

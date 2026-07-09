@@ -12,9 +12,9 @@
 | Étape | Sujet | Statut |
 |---|---|---|
 | 0 | Outillage et prérequis | ✅ |
-| 1 | Comprendre GitOps | ⬜ |
-| 2 | Vocabulaire ArgoCD | ⬜ |
-| 3 | Containeriser un service | ⬜ |
+| 1 | Comprendre GitOps | ✅ |
+| 2 | Vocabulaire ArgoCD | ✅ |
+| 3 | Containeriser un service | 🟡 local validé, push GHCR à faire |
 | 4 | Écrire un chart Helm | ⬜ |
 | 5 | Installer ArgoCD et déclarer une première Application | ⬜ |
 | 6 | Pattern App of Apps | ⬜ |
@@ -42,33 +42,33 @@
 
 ## Étape 1 - Comprendre GitOps
 
-- [ ] Lire la partie GitOps du polycopié.
-- [ ] Expliquer la différence push vs pull.
-- [ ] Expliquer pourquoi Git devient la source de vérité.
-- [ ] Identifier ce qu'ArgoCD ne fait pas.
-- [ ] Préparer une section "GitOps en 1 page" pour le rapport.
+- [x] Lire la partie GitOps du polycopié.
+- [x] Expliquer la différence push vs pull.
+- [x] Expliquer pourquoi Git devient la source de vérité.
+- [x] Identifier ce qu'ArgoCD ne fait pas.
+- [x] Préparer une section "GitOps en 1 page" pour le rapport.
 
 ## Étape 2 - Vocabulaire ArgoCD
 
-- [ ] Définir `Application`.
-- [ ] Définir `AppProject`.
-- [ ] Définir `Sync`.
-- [ ] Définir `Health`.
-- [ ] Définir `OutOfSync`.
-- [ ] Définir `Self Heal`.
-- [ ] Définir `Prune`.
-- [ ] Définir `ApplicationSet`.
-- [ ] Ajouter un exemple concret du projet pour chaque terme.
+- [x] Définir `Application`.
+- [x] Définir `AppProject`.
+- [x] Définir `Sync`.
+- [x] Définir `Health`.
+- [x] Définir `OutOfSync`.
+- [x] Définir `Self Heal`.
+- [x] Définir `Prune`.
+- [x] Définir `ApplicationSet`.
+- [x] Ajouter un exemple concret du projet pour chaque terme.
 
 ## Étape 3 - Containeriser un service
 
-- [ ] Choisir le service de départ.
-- [ ] Vérifier le Dockerfile.
-- [ ] Construire l'image localement.
-- [ ] Tagger l'image avec le SHA Git court.
-- [ ] Tester `/healthz` avec `docker run`.
-- [ ] Préparer la publication GHCR.
-- [ ] Documenter la validation.
+- [x] Choisir le service de départ.
+- [x] Vérifier le Dockerfile.
+- [x] Construire l'image localement.
+- [x] Tagger l'image avec le SHA Git court.
+- [x] Tester `/healthz` avec `docker run`.
+- [ ] Publier l'image sur GHCR avec un token `write:packages`.
+- [x] Documenter la validation.
 
 ## Étape 4 - Écrire un chart Helm
 
