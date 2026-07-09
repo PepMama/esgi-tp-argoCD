@@ -67,7 +67,7 @@
 - [x] Construire l'image localement.
 - [x] Tagger l'image avec le SHA Git court.
 - [x] Tester `/healthz` avec `docker run`.
-- [ ] Publier l'image sur GHCR avec un token `write:packages`.
+- [x] Publier l'image sur GHCR avec un token `write:packages`.
 - [x] Documenter la validation.
 
 ## Étape 4 - Écrire un chart Helm
