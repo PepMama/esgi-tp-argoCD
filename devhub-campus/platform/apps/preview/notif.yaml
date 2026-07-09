@@ -1,13 +1,18 @@
-# ApplicationSet preview pour notif.
-# TODO : à compléter à partir du modèle annuaire.yaml.
-
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
   name: notif-preview
   namespace: argocd
 spec:
-  generators: []
+  generators:
+    - pullRequest:
+        github:
+          owner: PepMama
+          repo: esgi-tp-argoCD
+          tokenRef:
+            secretName: github-token
+            key: token
+        requeueAfterSeconds: 60
   template:
     metadata:
       name: notif-preview-{{branch_slug}}
@@ -17,13 +22,15 @@ spec:
     spec:
       project: devhub
       source:
-        repoURL: https://github.com/<votre-handle>/devhub-campus.git
+        repoURL: https://github.com/PepMama/esgi-tp-argoCD.git
         targetRevision: '{{branch}}'
-        path: services/notif/chart
+        path: devhub-campus/services/notif/chart
         helm:
           valueFiles:
             - values-preview.yaml
-          parameters: []
+          parameters:
+            - name: ingress.host
+              value: '{{branch_slug}}.devhub.local'
       destination:
         server: https://kubernetes.default.svc
         namespace: devhub-preview-{{branch_slug}}

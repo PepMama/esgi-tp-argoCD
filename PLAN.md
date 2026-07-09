@@ -1,6 +1,6 @@
 # Plan de suivi - TP ArgoCD DevHub Campus
 
-> Fichier de pilotage du TP.  
+> Fichier de pilotage du TP.
 > Cocher les cases `- [x]` au fur et à mesure de l'avancement.
 
 **Dernière mise à jour** : 2026-07-09
@@ -96,8 +96,8 @@
 - [x] Comprendre le rôle de la root Application.
 - [x] Compléter `platform/bootstrap/root-app.yaml`.
 - [x] Compléter les Applications dans `platform/apps/dev/`.
-- [ ] Vérifier que la root Application pilote les applications enfants.
-- [ ] Tester un changement Git et la détection par ArgoCD.
+- [x] Vérifier que la root Application pilote les applications enfants.
+- [x] Tester un changement Git et la détection par ArgoCD.
 
 ## Étape 7 - ApplicationSet et previews par branche
 
