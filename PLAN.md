@@ -14,13 +14,13 @@
 | 0 | Outillage et prérequis | ✅ |
 | 1 | Comprendre GitOps | ✅ |
 | 2 | Vocabulaire ArgoCD | ✅ |
-| 3 | Containeriser un service | 🟡 local validé, push GHCR à faire |
+| 3 | Containeriser un service | ✅ |
 | 4 | Écrire un chart Helm | ✅ |
-| 5 | Installer ArgoCD et déclarer une première Application | ⬜ |
-| 6 | Pattern App of Apps | ⬜ |
-| 7 | ApplicationSet et previews par branche | ⬜ |
-| 8 | Drift, rollback, hooks, sync waves | ⬜ |
-| 9 | Sécuriser et observer ArgoCD | ⬜ |
+| 5 | Installer ArgoCD et déclarer une première Application | ✅ |
+| 6 | Pattern App of Apps | ✅ |
+| 7 | ApplicationSet et previews par branche | ✅ |
+| 8 | Drift, rollback, hooks, sync waves | ✅ |
+| 9 | Sécuriser et observer ArgoCD | ✅ |
 | 10 | Comparer les outils GitOps (bonus) | ⬜ |
 | 11 | Synthèse obligatoire : ArgoCD et la production | ⬜ |
 | Rapport | Rapport final | ⬜ |
@@ -120,12 +120,12 @@
 
 ## Étape 9 - Sécuriser et observer ArgoCD
 
-- [ ] Compléter ou vérifier l'AppProject.
-- [ ] Comprendre les droits autorisés/interdits.
-- [ ] Vérifier les namespaces autorisés.
-- [ ] Lire les logs ArgoCD utiles.
-- [ ] Vérifier l'état des composants ArgoCD.
-- [ ] Documenter les limites de sécurité restantes.
+- [x] Compléter ou vérifier l'AppProject.
+- [x] Comprendre les droits autorisés/interdits.
+- [x] Vérifier les namespaces autorisés.
+- [x] Lire les logs ArgoCD utiles.
+- [x] Vérifier l'état des composants ArgoCD.
+- [x] Documenter les limites de sécurité restantes.
 
 ## Étape 10 - Comparer les outils GitOps (bonus)
 

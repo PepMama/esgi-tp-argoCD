@@ -1,33 +1,29 @@
 # Values Helm pour installer ArgoCD lui-même (chart argo/argo-cd).
 # Ce fichier est consommé par `make argocd-install`.
-#
-# Doc du chart : https://github.com/argoproj/argo-helm/tree/main/charts/argo-cd
-#
-# Le but de ce fichier : exposer l'UI via l'ingress-nginx du cluster,
-# avec un host `argocd.devhub.local`. Le reste est laissé par défaut.
 
+# UI ArgoCD exposée via ingress-nginx sur argocd.devhub.local.
 global:
   domain: argocd.devhub.local
 
 configs:
   params:
-    # désactive le TLS interne — l'ingress-nginx est devant pour le HTTPS.
+    # Désactive le TLS interne : l'ingress-nginx est devant en HTTP local.
     server.insecure: true
-  cm:
-    # TODO étape 9 : activer les notifications / l'OIDC / des comptes locaux.
-    # Pour l'étape 5, vous n'avez rien à ajouter ici.
-    timeout.reconciliation: 180s
-    # TODO étape 9 : ajouter des `accounts.<user>: login, apiKey` pour
-    # créer un compte non-admin destiné aux tests RBAC.
 
-  # TODO étape 9 : ajouter le RBAC ArgoCD ici.
-  # Référence : https://argo-cd.readthedocs.io/en/stable/operator-manual/rbac/
-  # rbac:
-  #   policy.default: ""
-  #   policy.csv: |
-  #     # TODO : un rôle developer + binding du compte créé ci-dessus
-  #     p, role:developer, applications, get, devhub/*, allow
-  #     # TODO : compléter pour autoriser le sync uniquement sur ses Apps
+  cm:
+    timeout.reconciliation: 180s
+    accounts.developer: login, apiKey
+    accounts.platform-admin: login, apiKey
+
+  rbac:
+    policy.default: ""
+    policy.csv: |
+      p, role:developer, applications, get, devhub/*, allow
+      p, role:developer, applications, sync, devhub/notif-*, allow
+      p, role:developer, logs, get, devhub/notif-*, allow
+      p, role:platform-admin, *, *, *, allow
+      g, developer, role:developer
+      g, platform-admin, role:platform-admin
 
 server:
   ingress:
@@ -35,18 +31,10 @@ server:
     ingressClassName: nginx
     hostname: argocd.devhub.local
     annotations:
-      # ArgoCD termine son propre TLS en interne. On dit à l'ingress
-      # de ne pas refaire de TLS terminaison côté server.
       nginx.ingress.kubernetes.io/backend-protocol: HTTP
     tls: false
 
-# TODO étape 9 (défi) : activer la sous-chart notifications et
-# brancher un webhook qui envoie un message à chaque sync échouée.
-# notifications:
-#   enabled: true
-#   ...
-
-# Garde-fou ressources — utile en TP pour ne pas saturer la machine.
+# Garde-fou ressources : utile en TP pour ne pas saturer la machine.
 controller:
   resources:
     requests: { cpu: "50m", memory: "256Mi" }
